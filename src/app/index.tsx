@@ -36,7 +36,7 @@ export default function Index() {
           <Image
             source={require("../../assets/images/meatball-menu.png")}
             // https://thenounproject.com/icon/3-dots-585197/
-            style={{ width: 25, height: 25 }}
+            style={styles.smallImage}
           />
         </View>
       </View>
@@ -46,7 +46,7 @@ export default function Index() {
           source={require("../../assets/images/placeholder-person.png")}
           style={{
             width: "100%",
-            height: 500,
+            height: 400,
             marginRight: 10,
           }}
         />
@@ -85,9 +85,47 @@ export default function Index() {
           />
         </View>
       </View>
-      <Pressable onPress={onPressFunction}>
-        <Text>Alert</Text>
-      </Pressable>
+
+      <View style={styles.bar}>
+        <Image
+          source={require("../../assets/images/placeholder-person.png")}
+          // https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
+          style={[styles.smallImage, { borderRadius: 25, marginRight: -5 }]}
+        />
+        <Image
+          source={require("../../assets/images/placeholder-person.png")}
+          // https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
+          style={[styles.smallImage, { borderRadius: 25, marginRight: -5 }]}
+        />
+        <Image
+          source={require("../../assets/images/placeholder-person.png")}
+          // https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
+          style={[styles.smallImage, { borderRadius: 25, marginRight: 10 }]}
+        />
+        <Text style={styles.comment}>
+          Liked by <Text style={styles.bold}>paisley.print48</Text> and{" "}
+          <Text style={styles.bold}>7 others</Text>
+        </Text>
+      </View>
+      <View style={styles.commentSection}>
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>frenchie_fry39</Text> Fresh shot on a sunny
+          day! ☀️
+        </Text>
+        <Text style={[styles.comment, styles.faded]}>View all 12 comments</Text>
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>lil_wyatt838</Text> Awesome tones
+        </Text>
+        <Text style={styles.comment}>
+          <Text style={styles.bold}>pia.in.a.pod</Text> Gorg. Love it! ❤️
+        </Text>
+        <Text style={[styles.faded, { fontSize: 12 }]}>1 day ago</Text>
+      </View>
+      <View>
+        <Pressable onPress={onPressFunction} style={styles.button}>
+          <Text style={{ color: "#FFFFFF" }}>Alert</Text>
+        </Pressable>
+      </View>
     </>
   );
 }
@@ -132,6 +170,26 @@ const styles = StyleSheet.create({
   mainIcons: {
     width: 35,
     height: 35,
-    marginRight: 10,
+    marginRight: 15,
+  },
+  smallImage: {
+    width: 25,
+    height: 25,
+  },
+  comment: {
+    paddingVertical: 4,
+    fontSize: 15,
+  },
+  commentSection: {
+    paddingHorizontal: 20,
+  },
+  button: {
+    margin: 10,
+    backgroundColor: "#4150f7",
+    padding: 10,
+    borderRadius: 10,
+    width: 100,
+    alignItems: "center",
+    alignSelf: "center",
   },
 });
