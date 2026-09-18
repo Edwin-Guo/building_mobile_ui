@@ -51,6 +51,40 @@ export default function Index() {
           }}
         />
       </View>
+
+      <View style={styles.bar}>
+        <View>
+          <Image
+            source={require("../../assets/images/heart.png")}
+            // https://www.svgrepo.com/svg/532473/heart
+            style={styles.mainIcons}
+          />
+        </View>
+
+        <View>
+          <Image
+            source={require("../../assets/images/text-bubble.png")}
+            // https://www.svgrepo.com/svg/533232/message-circle
+            style={styles.mainIcons}
+          />
+        </View>
+
+        <View>
+          <Image
+            source={require("../../assets/images/plane.png")}
+            // https://www.svgrepo.com/svg/437099/paperplane
+            style={styles.mainIcons}
+          />
+        </View>
+
+        <View style={styles.rightSide}>
+          <Image
+            source={require("../../assets/images/bookmark.png")}
+            // https://www.svgrepo.com/svg/520557/bookmark
+            style={styles.mainIcons}
+          />
+        </View>
+      </View>
       <Pressable onPress={onPressFunction}>
         <Text>Alert</Text>
       </Pressable>
@@ -94,5 +128,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 10,
     paddingHorizontal: 20,
+  },
+  mainIcons: {
+    width: 35,
+    height: 35,
+    marginRight: 10,
   },
 });
