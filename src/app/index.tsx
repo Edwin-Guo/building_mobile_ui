@@ -8,7 +8,8 @@ export default function Index() {
         <View style={styles.leftSide}>
           <Image
             source={require("../../assets/images/left-arrow.png")}
-            style={{ width: 50, height: 50 }}
+            // https://www.svgrepo.com/svg/408302/chevron-left-arrow
+            style={{ width: 40, height: 40 }}
           />
         </View>
         <View style={styles.center}>
@@ -22,7 +23,8 @@ export default function Index() {
       <View style={styles.bar}>
         <View>
           <Image
-            source={require("../../assets/images/placeholder-person.jpg")}
+            source={require("../../assets/images/placeholder-person.png")}
+            // https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/
             style={{ width: 50, height: 50, marginRight: 10, borderRadius: 25 }}
           />
         </View>
@@ -33,28 +35,30 @@ export default function Index() {
         <View style={styles.rightSide}>
           <Image
             source={require("../../assets/images/meatball-menu.png")}
+            // https://thenounproject.com/icon/3-dots-585197/
             style={{ width: 25, height: 25 }}
           />
         </View>
       </View>
 
-      <View style={styles.container}>
-        <Text>Hello World!</Text>
-
-        <Pressable onPress={onPressFunction}>
-          <Text>Alert</Text>
-        </Pressable>
+      <View>
+        <Image
+          source={require("../../assets/images/placeholder-person.png")}
+          style={{
+            width: "100%",
+            height: 500,
+            marginRight: 10,
+          }}
+        />
       </View>
+      <Pressable onPress={onPressFunction}>
+        <Text>Alert</Text>
+      </Pressable>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   faded: {
     color: "#a6a6a6",
   },
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: 50,
     marginBottom: 10,
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
   },
   center: {
     alignItems: "center",
@@ -88,7 +92,7 @@ const styles = StyleSheet.create({
   bar: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 10,
-    paddingHorizontal: 30,
+    marginVertical: 10,
+    paddingHorizontal: 20,
   },
 });
